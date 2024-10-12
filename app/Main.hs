@@ -1,8 +1,7 @@
 module Main where
 
-import Servant
 import Network.Wai.Handler.Warp (run)
-import FirstServer (proxy, server)
+import Servers.FirstServer (app)
 
 main :: IO ()
 main = do
@@ -10,5 +9,3 @@ main = do
   run 8000 app
   putStrLn "Stopping the server..."
 
-app :: Application
-app = serve proxy server
