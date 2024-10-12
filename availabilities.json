@@ -1,0 +1,22 @@
+[
+  {
+    "day": "Monday",
+    "availability": "8am-12pm 14pm-18pm"
+  },
+  {
+    "day": "Tuesday",
+    "availability": "8am-12pm 14pm-18pm"
+  },
+  {
+    "day": "Wednesday",
+    "availability": "8am-12pm 14pm-18pm"
+  },
+  {
+    "day": "Thursday",
+    "availability": "8am-12pm 14pm-18pm"
+  },
+  {
+    "day": "Friday",
+    "availability": "8am-12pm 14pm-18pm"
+  }
+]
