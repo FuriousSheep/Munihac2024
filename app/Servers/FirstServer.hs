@@ -1,12 +1,6 @@
-{-# LANGUAGE OverloadedRecordDot #-}
-
 module Servers.FirstServer where
    
-import Data.Aeson
-import Data.Text
 import Domain.Availability
-import Domain.Day
-import GHC.Generics
 import Servant 
 
 -- | This is the description of the http api 
@@ -19,7 +13,7 @@ import Servant
 -- |      |                          |
 -- |      |                          v
 -- v      v         {*********************************}
-type MyServantAPI = "api" :> Get '[JSON] [Availability] 
+type AvailabilityApi = "api" :> Get '[JSON] [Availability] 
 --                    ^   ^    ^     ^         ^
 -- (Symbol)           |   |    |     |         |
 -- this endpoint      |   |    |     |    What content is returned from the
@@ -41,10 +35,10 @@ app = serve proxy server
 -- It's used to carry the type of the API into the server
 -- If you want to ask why: too bad! 
 -- (But you can check out servant's documentation)
-proxy :: Proxy MyServantAPI
+proxy :: Proxy AvailabilityApi
 proxy = Proxy
 
 -- The description of how routes are handled.
 -- Here we have a single route, so we can handle all of them with a constant.
-server :: Server MyServantAPI
+server :: Server AvailabilityApi
 server = pure availabilities
