@@ -1,7 +1,6 @@
 module Domain.AvailabilityV2 where
 
 import Data.Aeson
-import Data.Text
 import Domain.Day
 import GHC.Generics
 

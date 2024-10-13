@@ -17,7 +17,7 @@ instance ToJSON Availability where
   -- to the encoding
   -- for more: see Data.Aeson on hackage.haskell.org
 
--- you can write an instance
+-- you can write an instance by hand
 -- instance ToJSON Availability where
 --   toJSON availability = 
 --     object 
