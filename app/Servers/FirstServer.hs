@@ -12,19 +12,19 @@ import Servant
 -- |      |                The actual type
 -- |      |                          |
 -- |      |                          v
--- v      v         {*********************************}
+-- v      v            {*********************************}
 type AvailabilityApi = "api" :> Get '[JSON] [Availability] 
---                    ^   ^    ^     ^         ^
--- (Symbol)           |   |    |     |         |
--- this endpoint      |   |    |     |    What content is returned from the
--- starts with "/api"     |    |     |    http request.
---                        |    |     |             
--- a type operator to     |    |     The list of types used in the Accept HTTP headers             
--- combine the types together  |     
--- don't worry about it        |                   
---                             The accepted HTTP verb for this endpoint
---                             Available verbs: Post Put Get Head Option ...
---                             iywtkm: look for http on https://developer.mozilla.org      
+--                        ^   ^    ^     ^         ^
+--     (Symbol)           |   |    |     |         |
+--     this endpoint      |   |    |     |    What content is returned from the
+--     starts with "/api"     |    |     |    http request.
+--                            |    |     |             
+--     a type operator to     |    |     The list of types used in the Accept HTTP headers             
+--     combine the types together  |     
+--     don't worry about it        |                   
+--                                 The accepted HTTP verb for this endpoint
+--                                 Available verbs: Post Put Get Head Option ...
+--                                 iywtkm: look for http on https://developer.mozilla.org      
                                                
 
 -- And this is your application!

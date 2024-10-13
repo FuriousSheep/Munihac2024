@@ -8,7 +8,7 @@ import GHC.Generics
 data Availability = Availability 
   { day :: Day
   , hours :: Text
-  } deriving Generic
+  } deriving Generic -- <- what's this?
 
 -- you can generate an instance
 instance ToJSON Availability where
